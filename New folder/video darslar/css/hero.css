@@ -1,0 +1,21 @@
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kub {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 40px;
+    margin-top: -700px;
+    /* position: absolute; */
+    /* bottom: 700px; */
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.kub-text{
+    line-height: 1.7;
+    font-size: 17pt;
+    font-weight: bold;
+    color: blue;
+}

@@ -1,0 +1,473 @@
+<html>
+<head>
+
+<title>Quiz</title>
+<link rel="stylesheet" href="test.css">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta name="Author" content="Abduraxmanova Zuhra.">
+<script language="JavaScript">
+<!-- hide
+
+var scrtxt = "Virus va antivirus dasturlari" ; 
+var length = scrtxt.length;
+var width = 100;
+var pos = -(width + 2);
+
+function scroll() {
+  pos++;
+  var scroller = "";
+  if (pos == length) {
+    pos = -(width + 2);
+  }
+
+  if (pos < 0) {
+    for (var i = 1; i <= Math.abs(pos); i++) {
+      scroller = scroller+" ";}
+    scroller = scroller + scrtxt.substring(0, width - i + 1);
+  }
+  else {
+    scroller = scroller + scrtxt.substring(pos, width + pos);
+  }
+
+  window.status = scroller;
+  setTimeout("scroll()", 100);
+}
+
+// -->
+</script>
+</head>
+
+<body onLoad="scroll()">
+
+<font face="Arial" style="font-size: 9pt">
+
+<Script Language="JavaScript">
+<!--������ ��������
+
+var res="2222121331"
+
+function check_me()
+{
+	var count=0
+	with(document.test)
+	{
+		if (!Q1[0].checked&&!Q1[1].checked&&!Q1[2].checked&&!Q1[3].checked) {count+=1};
+		if (!Q2[0].checked&&!Q2[1].checked&&!Q2[2].checked&&!Q2[3].checked) {count+=1};
+		if (!Q3[0].checked&&!Q3[1].checked&&!Q3[2].checked&&!Q3[3].checked) {count+=1};
+		if (!Q4[0].checked&&!Q4[1].checked&&!Q4[2].checked&&!Q4[3].checked) {count+=1};
+		if (!Q5[0].checked&&!Q5[1].checked&&!Q5[2].checked&&!Q5[3].checked) {count+=1};
+		if (!Q6[0].checked&&!Q6[1].checked&&!Q6[2].checked&&!Q6[3].checked) {count+=1};
+		if (!Q7[0].checked&&!Q7[1].checked&&!Q7[2].checked&&!Q7[3].checked) {count+=1};
+		if (!Q8[0].checked&&!Q8[1].checked&&!Q8[2].checked&&!Q8[3].checked) {count+=1};
+		if (!Q9[0].checked&&!Q9[1].checked&&!Q9[2].checked&&!Q9[3].checked) {count+=1};
+		if (!Q10[0].checked&&!Q10[1].checked&&!Q10[2].checked&&!Q10[3].checked) {count+=1};
+		if (count>0) {alert("Savolga to`la javob bermadingiz. Yana urinib ko`ring!")} 
+		else answer()
+	}
+}
+
+function control(k,f1,f2,f3,f4,f5,f6,f7,f8,f9,f10)
+{
+	if (k==1&&f1.checked) return true;
+	if (k==2&&f2.checked) return true;
+	if (k==3&&f3.checked) return true;
+	if (k==4&&f4.checked) return true;
+	if (k==5&&f5.checked) return true;
+	if (k==6&&f6.checked) return true;
+	if (k==7&&f7.checked) return true;
+	if (k==8&&f8.checked) return true;
+	if (k==9&&f9.checked) return true;
+	if (k==10&&f10.checked) return true;
+	return false;
+}
+
+function answer()
+{
+	answ="";
+	with(document)
+	{
+		answ+=control(res.charAt(0),test.Q1[0],test.Q1[1],test.Q1[2],test.Q1[3])?"1":"0"
+		answ+=control(res.charAt(1),test.Q2[0],test.Q2[1],test.Q2[2],test.Q2[3])?"1":"0"
+		answ+=control(res.charAt(2),test.Q3[0],test.Q3[1],test.Q3[2],test.Q3[3])?"1":"0"
+		answ+=control(res.charAt(3),test.Q4[0],test.Q4[1],test.Q4[2],test.Q4[3])?"1":"0"
+		answ+=control(res.charAt(4),test.Q5[0],test.Q5[1],test.Q5[2],test.Q5[3])?"1":"0"
+		answ+=control(res.charAt(5),test.Q6[0],test.Q6[1],test.Q6[2],test.Q6[3])?"1":"0"
+		answ+=control(res.charAt(6),test.Q7[0],test.Q7[1],test.Q7[2],test.Q7[3])?"1":"0"
+		answ+=control(res.charAt(7),test.Q8[0],test.Q8[1],test.Q8[2],test.Q8[3])?"1":"0"
+		answ+=control(res.charAt(8),test.Q9[0],test.Q9[1],test.Q9[2],test.Q9[3])?"1":"0"
+		answ+=control(res.charAt(9),test.Q10[0],test.Q10[1],test.Q10[2],test.Q10[3])?"1":"0"
+		showResult();
+	}
+}
+
+function showResult()
+{
+	var nok=0;
+	var i,s;
+	for (i=0;i<answ.length;i++) {nok+=answ.charAt(i)=="1"?1:0;}
+	if(nok<=4) s='"qoniqarsiz"';
+	if(nok>4 && nok<6) s='"qoniqarli"';
+	if(nok==6) s='"qoniqarli"';
+	if(nok>6 && nok<8) s='"yahshi"';
+	if(nok==8) s='"yahshi"';
+	if(nok>8) s='"a`lo"';
+	document.test.s1.value="�ug`ri javoblar soni "+nok+". Sizning bahoingiz "+s+". ��pshiriq nomeri oldidagi belgiga qarang, agar javob to`g`ri bo`lsa (+). aksincha (-) belgisi turibdi.";
+	with(document.test)
+	{
+		if (answ.charAt(0)=="1") {T1.value=" +"} else {T1.value=" -"};
+		if (answ.charAt(1)=="1") {T2.value=" +"} else {T2.value=" -"};
+		if (answ.charAt(2)=="1") {T3.value=" +"} else {T3.value=" -"};
+		if (answ.charAt(3)=="1") {T4.value=" +"} else {T4.value=" -"};
+		if (answ.charAt(4)=="1") {T5.value=" +"} else {T5.value=" -"};
+		if (answ.charAt(5)=="1") {T6.value=" +"} else {T6.value=" -"};
+		if (answ.charAt(6)=="1") {T7.value=" +"} else {T7.value=" -"};
+		if (answ.charAt(7)=="1") {T8.value=" +"} else {T8.value=" -"};
+		if (answ.charAt(8)=="1") {T9.value=" +"} else {T9.value=" -"};
+		if (answ.charAt(9)=="1") {T10.value=" +"} else {T10.value=" -"};
+	}
+}
+
+</script>
+</font>
+<form name=test>
+<center><font face="Arial" style="font-size: 9pt; font-weight: 700">
+<p class="title">TEST SAVOLLAR</p>
+</center>
+
+</font>
+<font face="Arial,Helvetica,sans-serif" color="000099">
+
+<ol>
+
+<li><h4> <font face="Arial" size="3"><span style="font-size: 9pt"> 
+<font face="Arial"> <input name=T1 size=1></font></span></font></font><span lang="EN-US" style="font-size: 9pt; font-family: Arial; font-weight: 400">Ilk 
+bor birinchi virus qaysi mamlakatdaishlab chiqilgan</span><font face="Arial" style="font-size: 9pt"><span style="font-weight: 400">?
+</span> </h4>
+
+</font>
+
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+
+   <font face="Arial">
+
+   <input type=radio name=Q1></font></span></font><font face="Arial" style="font-size: 9pt">
+Rossiya<br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+  <font face="Arial">
+  <input type=radio name=Q1></font></span></font><font face="Arial" style="font-size: 9pt">
+AQSH<br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q1></font></span></font><font face="Arial" style="font-size: 9pt"><span lang="en-us"> 
+Angliya</span><br>
+</font><font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+  <font face="Arial">
+  <input type=radio name=Q1></font></span></font><font face="Arial" style="font-size: 9pt"><span lang="en-us"> 
+Germaniya</span></font><font face="Arial,Helvetica,sans-serif" color="000099"><p>&nbsp;<li><h4> 
+<font face="Arial" size="3"><span style="font-size: 9pt"> <font face="Arial"> <input name=T2 size=1></font></span></font></font><font face="Arial" style="font-size: 9pt"><span style="font-weight: 400"> 
+Black Hole</span></font><span lang="EN-US" style="font-size: 9pt; font-family: Arial; font-weight: 400"> 
+so'zining ma'nosi?</span><font face="Arial" style="font-size: 9pt"><span style="font-weight: 400">
+</span> </h4>
+
+</font>
+
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+
+  <font face="Arial">
+
+  <input type=radio name=Q2></font></span></font><font face="Arial" style="font-size: 9pt"> 
+Qora tun<br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+  <font face="Arial">
+  <input type=radio name=Q2></font></span></font><font face="Arial" style="font-size: 9pt"> 
+Qora teshik<br>
+</font><font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+  <font face="Arial">
+  <input type=radio name=Q2></font></span></font><font face="Arial" style="font-size: 9pt"> 
+Qora kunlar<br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q2></font></span></font><font face="Arial" style="font-size: 9pt"> 
+Qora virus<br>
+
+<br>
+</font>
+<font face="Arial,Helvetica,sans-serif" color="000099">
+<li><h4> <font face="Arial" size="3"><span style="font-size: 9pt"> 
+<font face="Arial"> <input name=T3 size=1></font></span></font></font><font face="Arial" style="font-size: 9pt"><span style="font-weight: 400">&nbsp; 
+Viruslar nechi guruhga bo'linadi?</span></font></h4>
+
+  <font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+
+  <font face="Arial">
+
+  <input type=radio name=Q3></font></span></font><font face="Arial" style="font-size: 9pt"> 
+3<br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q3></font></span></font><font face="Arial" style="font-size: 9pt"> 
+2<br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q3></font></span></font><font face="Arial" style="font-size: 9pt"> 
+4<br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q3></font></span></font><font face="Arial" style="font-size: 9pt"> 
+5<br>
+
+<br>
+</font>
+<font face="Arial,Helvetica,sans-serif" color="000099">
+<li><h4> <font face="Arial" size="3"><span style="font-size: 9pt"> 
+<font face="Arial"> <input name=T4 size=1></font></span></font></font><font face="Arial" style="font-size: 9pt">
+<span style="font-weight: 400">Qaysi virus 1988 yilda Internet tarmog'ida 30000 
+dan ko'proq kompyuterni zararlagan? </span>
+</font>
+</h4>
+
+   <font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+
+   <font face="Arial">
+
+   <input type=radio name=Q4></font></span></font><font face="Arial" style="font-size: 9pt">
+Blach Hole  <br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q4></font></span></font><font face="Arial" style="font-size: 9pt">
+Morissa <br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q4></font></span></font><font face="Arial" style="font-size: 9pt">
+Vena<br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q4></font></span></font><font face="Arial" style="font-size: 9pt">
+Win32 <br>
+
+<br>
+</font>
+
+   <font face="Arial,Helvetica,sans-serif" color="000099">
+<li><h4> <font face="Arial" size="3"><span style="font-size: 9pt"> 
+<font face="Arial"> <input name=T5 size=1></font></span></font></font><font face="Arial" style="font-size: 9pt"><span style="font-weight: 400">
+Qaysi antivirus dunyoda birinchi o'rinda turadi&nbsp;<span lang="en-us">-</span>?</span></font></h4>
+
+   <font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+
+   <font face="Arial">
+
+   <input type=radio name=Q5></font></span></font><font face="Arial" style="font-size: 9pt"> 
+Kasperskiy <br>
+</font><font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q5></font></span></font><font face="Arial" style="font-size: 9pt"> 
+Nod 32&nbsp;
+<br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q5></font></span></font><font face="Arial" style="font-size: 9pt"> 
+AntiVirusTolking 
+<br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q5></font></span></font><font face="Arial" style="font-size: 9pt"> 
+DrWeb<br>
+
+<br>
+</font>
+<font face="Arial,Helvetica,sans-serif" color="000099">
+<li><h4> <font face="Arial" size="3"><span style="font-size: 9pt"> 
+<font face="Arial"> <input name=T6 size=1></font></span></font></font><font face="Arial" style="font-size: 9pt"><span style="font-weight: 400"> 
+Eset Nod 32 antivirusida bazani yangilash uchun qaysi klavishdan foydalaniladi-? </span> </h4>
+
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+
+   <font face="Arial">
+
+   <input type=radio name=Q6></font></span></font><font face="Arial" style="font-size: 9pt">
+F4 <br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q6></font></span></font><font face="Arial" style="font-size: 9pt">
+F5 <br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q6></font></span></font><font face="Arial" style="font-size: 9pt">
+F7<br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q6></font></span></font><font face="Arial" style="font-size: 9pt">
+F12<br>
+
+<br>
+</font>
+<font face="Arial,Helvetica,sans-serif" color="000099">
+<li><h4> <font face="Arial" size="3"><span style="font-size: 9pt"> 
+<font face="Arial"> <input name=T7 size=1></font></span></font></font><font face="Arial" style="font-size: 9pt"><span style="font-weight: 400">
+Eset Nod 32 antivirusining nechta bo</span></font><span style="font-weight: 400"><font face="Arial" style="font-size: 9pt">'limi</font></span><font face="Arial" style="font-size: 9pt"><span style="font-weight: 400">
+bor? 
+</span> </h4>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+
+   <font face="Arial">
+
+   <input type=radio name=Q7></font></span></font><font face="Arial" style="font-size: 9pt"> 
+5<br>
+</font><font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q7></font></span></font><font face="Arial" style="font-size: 9pt"> 
+8<br>   
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">   
+   <font face="Arial">   
+   <input type=radio name=Q7></font></span></font><font face="Arial" style="font-size: 9pt"> 
+6 <br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q7></font></span></font><font face="Arial" style="font-size: 9pt"> 
+7&nbsp; <br>
+   
+<br>
+</font>
+<font face="Arial,Helvetica,sans-serif" color="000099"><li><h4> 
+<font face="Arial" size="3"><span style="font-size: 9pt"> <font face="Arial"> <input name=T8 size=1></font></span></font></font><font face="Arial" style="font-size: 9pt"><span style="font-weight: 400">&nbsp; 
+Qaysi biri antivirus dasturi tarkibiga kirmaydi?  
+</span>
+
+</h4>
+
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+
+   <font face="Arial">
+
+   <input type=radio name=Q8></font></span></font><font face="Arial" style="font-size: 9pt">
+Mcafee<br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q8></font></span></font><font face="Arial" style="font-size: 9pt">
+Aidstest
+<br>
+</font><font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q8></font></span></font><font face="Arial" style="font-size: 9pt">
+Vena <br>
+</font><font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q8></font></span></font><font face="Arial" style="font-size: 9pt">
+Kasperskiy<br>
+
+<br>
+</font>
+<font face="Arial,Helvetica,sans-serif" color="000099"><li><h4> 
+<font face="Arial" size="3"><span style="font-size: 9pt"> <font face="Arial"> <input name=T9 size=1></font></span></font></font><font face="Arial" style="font-size: 9pt"><span lang="en-us">
+</span><span style="font-weight: 400">Qaysi biri virus hisoblanmaydi- ?</span></font></h4>
+
+   <font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+
+   <font face="Arial">
+
+   <input type=radio name=Q9></font></span></font><font face="Arial" style="font-size: 9pt"> 
+I love you<br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q9></font></span></font><font face="Arial" style="font-size: 9pt"> 
+Vena <br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q9></font></span></font><font face="Arial" style="font-size: 9pt"> 
+Mcafee <br>
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q9></font></span></font><font face="Arial" style="font-size: 9pt"> 
+Win32 <br>
+
+<br>
+</font>
+
+   <font face="Arial,Helvetica,sans-serif" color="000099">
+<li><h4> <font face="Arial" size="3"><span style="font-size: 9pt"> 
+<font face="Arial"> <input name=T10 size=1></font></span></font></font><font face="Arial" style="font-size: 9pt"><span style="font-weight: 400">
+Eset Nod 32 virusning bazasi eskib qolsa uning emblemasi qaysi rangda bo'ladi-?
+</span>
+
+</h4>
+
+</font>
+
+   <font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+
+   <font face="Arial">
+
+   <input type=radio name=Q10></font></span></font><font face="Arial" style="font-size: 9pt">Qizil<br>
+</font><font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q10></font></span></font><font face="Arial" style="font-size: 9pt">Ko'k<br>
+</font><font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q10></font></span></font><font face="Arial" style="font-size: 9pt">Yashil<br>
+</font><font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+   <font face="Arial">
+   <input type=radio name=Q10></font></span></font><font face="Arial" style="font-size: 9pt">Sariq<br>
+
+</font>
+
+</ol>
+
+   <font face="Arial" style="font-size: 9pt">
+
+<br>
+</font>
+
+   <font face="Arial,Helvetica,sans-serif" color="000099">
+<center>
+<p> <font face="Arial" size="3"><span style="font-size: 9pt">
+<font face="Arial" color="#000000"> <textarea rows=7 cols=47 name=s1 > </textarea></font></span></font></font><font face="Arial" style="font-size: 9pt"> </p>
+</font>
+
+   <font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+<font face="Arial">
+<input class="natija" type=button value="Natijani ko`rish" onClick=check_me()></font></span></font><font face="Arial" style="font-size: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;
+</font>
+<font face="Arial" size="3" color="000099"><span style="font-size: 9pt">
+<font face="Arial">
+<input class="reset" type=reset value="Javoblarni olib tashlash"></font></span></font><font face="Arial,Helvetica,sans-serif"><font face="Arial" style="font-size: 9pt">
+</font>
+</center>
+<font face="Arial" style="font-size: 9pt">
+<br><br>
+
+</font>
+
+</form>
+</font>
+
+   <font face="Arial" color="000099" style="font-size: 9pt">
+<p>&nbsp;</font><font face="Arial,Helvetica,sans-serif"><h5><span style="font-weight: 400">
+<font face="Arial" style="font-size: 9pt">&nbsp;&nbsp;&nbsp;&nbsp;</font></span></h5>
+</font>
+</body>
+</html>
